@@ -3,10 +3,9 @@ Flask web site with vocabulary matching game
 (identify vocabulary words that can be made
 from a scrambled string)
 """
-
 import flask
 import logging
-from falsk import request
+from flask import request
 # Our modules
 from src.letterbag import LetterBag
 from src.vocab import Vocab
@@ -118,7 +117,7 @@ def check():
     else:
         solve = False
        #return flask.redirect(flask.url_for("success"))
-    rslt={"text" : text, "found" : YOU FOUND:, "condition" : condition, "solve" = solve, "matched" = matched}
+    rslt={"text" : text, "found" : YOU_FOUND, "condition" : condition, "solve" : solve, "matched" : matched}
     return flask.jsnify(result = rslt)
 
 
